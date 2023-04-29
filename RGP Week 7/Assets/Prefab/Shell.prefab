@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 4817464725585099871}
   - component: {fileID: 2660585301864700845}
   - component: {fileID: 7949700982270178261}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Shell
-  m_TagString: Untagged
+  m_TagString: Shell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,6 +84,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b77a3b860ba6540a7ecf861cd2fca1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 40
 --- !u!1 &3424846001439317895
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,7 +95,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3424846001439317892}
   - component: {fileID: 3424846001439317893}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
