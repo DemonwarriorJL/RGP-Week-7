@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.SceneManagement;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerHexMovement : MonoBehaviour
 {
     private Vector2 velocity;
     private Vector3 direction;
