@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyBattleAI : MonoBehaviour
 {
@@ -16,11 +17,17 @@ public class EnemyBattleAI : MonoBehaviour
 
     [SerializeField] private GameObject missle;
 
+    [SerializeField] private Image healthEnemyIMG;
+    [SerializeField] private Image shieldEnemyIMG;
+
     public static Vector3 misslePoint1;
     public static Vector3 misslePoint2;
 
     [SerializeField] private float missleTimerMax = 5f;
+
     private float missleTimer;
+    private float healthValue;
+    private float shieldValue;
 
     private Vector2 movement;
     private float timeLeft;
@@ -35,6 +42,12 @@ public class EnemyBattleAI : MonoBehaviour
 
     private void Update()
     {
+        healthValue = EnemyHealth / EnemyMaxHealth;
+        shieldValue = EnemyShield / EnemyMaxShield;
+
+        healthEnemyIMG.fillAmount = healthValue;
+        shieldEnemyIMG.fillAmount = shieldValue;
+
         missleTimer += Time.deltaTime;
 
         if(missleTimer >= missleTimerMax)

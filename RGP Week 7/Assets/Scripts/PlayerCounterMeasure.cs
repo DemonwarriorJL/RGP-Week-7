@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerCounterMeasure : MonoBehaviour
 {
@@ -8,8 +9,13 @@ public class PlayerCounterMeasure : MonoBehaviour
 
     [SerializeField] private float playerHealth;
     [SerializeField] private float timerMax;
-    
+
+    [SerializeField] private Image healthIMG;
+
+
     private float timer;
+
+    public float healthValue;
 
     [SerializeField] bool invincible = false;
 
@@ -20,7 +26,10 @@ public class PlayerCounterMeasure : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space)) 
+        healthValue = playerHealth/PlayerInfo.playerMaxHealth;
+        healthIMG.fillAmount = healthValue;
+
+        if (Input.GetKeyDown(KeyCode.Space)) 
         {
             Instantiate(flareParticles);
             invincible = true;
