@@ -31,6 +31,8 @@ public class PlayerShoot : MonoBehaviour
         shellsList.Add(shellIMG1);
         shellsList.Add(shellIMG2);
         shellsList.Add(shellIMG3);
+
+        Cursor.visible = true;
     }
 
     private void Update()

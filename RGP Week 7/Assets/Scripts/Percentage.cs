@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
+using UnityEngine.SceneManagement;
+
 
 public class Percentage : MonoBehaviour
 {
@@ -16,12 +17,14 @@ public class Percentage : MonoBehaviour
 
     void Update()
     {
-        float TValue = timer.TValue;
-        if (TValue == 0.0f)
-        { 
-            float percentage = ColourChanger.counter;
-            percentage = (percentage / 111) *100;
-            TText.text = percentage.ToString("F2")+ "%";
+        float percentage = ColourChanger.counter;
+        percentage = (percentage / 111) *100;
+        TText.text = percentage.ToString("F2")+ "%";
+
+        if (timer.TValue <= 0)
+        {
+            PlayerInfo.playerShieldPercentage = percentage;
+            SceneManager.LoadScene(2);
         }
     }
 }

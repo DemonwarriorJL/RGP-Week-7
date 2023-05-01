@@ -8,7 +8,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MapScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/GameScene.unity
-    guid: 6d90ca543024f6444a4785c847fd1788
+    path: Assets/Scenes/HackingGame.unity
+    guid: 0fa30fc69b7ef89418079eea79b0e4f9
+  - enabled: 1
+    path: Assets/Scenes/BattleScene.unity
+    guid: 01a91ca238497ff4e9dbbb3801774817
+  - enabled: 1
+    path: Assets/Scenes/BattleDefeatAftermath.unity
+    guid: 1104ce8875f05934c84a1932ed0fe6a4
+  - enabled: 1
+    path: Assets/Scenes/BattleVictoryAftermath.unity
+    guid: ca240c91925cb2a48951e7035e957b97
   m_configObjects: {}

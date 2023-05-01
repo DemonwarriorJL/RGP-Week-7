@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerInfo : ScriptableObject
 {
     public static float playerMaxHealth = 100;
+    public static float playerShieldPercentage;
 
     public static int playerGold = 0;
     public static bool timerUpgrade = false;

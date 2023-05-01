@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class EnemyBattleAI : MonoBehaviour
 {
@@ -38,6 +39,7 @@ public class EnemyBattleAI : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         EnemyHealth = EnemyMaxHealth;
         EnemyShield = EnemyMaxShield;
+        shieldPercentage = PlayerInfo.playerShieldPercentage;
     }
 
     private void Update()
@@ -85,7 +87,7 @@ public class EnemyBattleAI : MonoBehaviour
         }
         else if (EnemyShield <= 0 && EnemyHealth <= 0)
         {
-            Debug.Log("Ship Destroyed");
+            SceneManager.LoadScene(4);  
         }
         else if (EnemyShield > 0)
         {
