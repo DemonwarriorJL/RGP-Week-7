@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 1507668692955574314}
   - component: {fileID: 1507668692955574311}
   - component: {fileID: 1507668692955574310}
-  m_Layer: 11
+  - component: {fileID: 969113738033905761}
+  m_Layer: 8
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -127,7 +128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 4096
   speed: 1000
 --- !u!50 &1507668692955574310
 Rigidbody2D:
@@ -150,3 +151,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &969113738033905761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507668692955574315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af6ee680ae3ad0c47b54b46dd4950b8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 1507668692955574313}
+  explosionParticles: {fileID: 2328130158612851088, guid: 29231c3884921ef4aa9f7f07fb9f4ad3, type: 3}
+  blockerLayer:
+    serializedVersion: 2
+    m_Bits: 8192

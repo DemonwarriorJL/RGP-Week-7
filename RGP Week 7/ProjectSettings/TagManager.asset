@@ -8,6 +8,8 @@ TagManager:
   - Enviroment
   - MisslePoint
   - Shell
+  - Floor
+  - Blocker
   layers:
   - Default
   - TransparentFX
@@ -21,9 +23,9 @@ TagManager:
   - Missle
   - Shell
   - Player
-  - 
-  - 
-  - 
+  - Wall
+  - Blocker
+  - ChangingTile
   - 
   - 
   - 

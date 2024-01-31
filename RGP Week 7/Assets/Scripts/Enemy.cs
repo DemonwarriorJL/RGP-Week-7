@@ -9,10 +9,6 @@ public class Enemy : MonoBehaviour
     public LayerMask mask;
     Rigidbody2D rb;
     private Collider2D coll;
-    private bool upB = false;
-    private bool downB = false;
-    private bool leftB = false;
-    private bool rightB = false;
     List<string> paths = new List<string>();
     bool isMoving = false;
     public float speed;
@@ -70,8 +66,8 @@ public class Enemy : MonoBehaviour
 
             if (paths.Count != 0)
             {
-                string path=GenerateRandomDirection(paths);
-                if (path == "up") 
+                string path = GenerateRandomDirection(paths);
+                if (path == "up")
                 {
                     rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
                     rb.velocity = new Vector2(0, speed * Time.fixedDeltaTime);
@@ -92,20 +88,20 @@ public class Enemy : MonoBehaviour
                     rb.velocity = new Vector2(speed * Time.fixedDeltaTime, 0);
                 }
             }
-            
+
         }
-        if(isMoving)
+        if (isMoving)
         {
             paths.Clear();
         }
 
         if (rb.velocity.magnitude > 0.1f)
         {
-            isMoving= true;
+            isMoving = true;
         }
         else
         {
-            isMoving= false;
+            isMoving = false;
         }
 
     }
